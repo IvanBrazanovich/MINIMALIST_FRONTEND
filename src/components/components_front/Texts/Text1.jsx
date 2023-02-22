@@ -9,7 +9,7 @@ const Text1 = () => {
   const [text4, setText4] = useState("text example");
 
   return (
-    <div className={styles.text1}>
+    <div className={styles.text1} code-type="T-1">
       <input
         onChange={(e) => setText1(e.target.value)}
         type="text"

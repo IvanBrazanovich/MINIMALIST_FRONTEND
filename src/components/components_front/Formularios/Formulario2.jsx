@@ -7,7 +7,7 @@ const Formulario2 = () => {
   const [email, setEmail] = useState("");
 
   return (
-    <form className={styles.form}>
+    <form className={styles.form} code-type="F-2">
       {alert.msg && <Alert />}
       <input
         onChange={(e) => setName(e.target.value)}

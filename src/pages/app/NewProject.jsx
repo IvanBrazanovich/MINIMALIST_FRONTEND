@@ -1,20 +1,34 @@
 import React from "react";
+import LayoutPage from "../../components/app/LayoutPage";
 import Formularios from "../../components/components_front/Formularios";
 import Texts from "../../components/components_front/Texts";
 import styles from "../../styles/pages/newProject.module.scss";
+import { useDispatch } from "react-redux";
+import { addComponent } from "../../features/app/createPageSlice";
 
 const NewProject = () => {
+  // React redux
+  const dispatch = useDispatch();
+
+  const handleClick = (e) => {
+    const componentCode = e.target
+      .closest("[code-type]")
+      .getAttribute("code-type");
+    dispatch(addComponent(componentCode));
+  };
+
   return (
     <div className={styles.newProject}>
       <h1 className={styles.newProject__heading}>Crea tu nuevo Proyecto</h1>
 
       <div className={styles.newProject__flexContainer}>
-        <div className={styles.newProject__sidebar}>
-          {" "}
+        <div className={styles.newProject__sidebar} onClick={handleClick}>
           <Formularios />
           <Texts />
         </div>
-        <div className={styles.newProject__layout}></div>
+        <div className={styles.newProject__layout}>
+          <LayoutPage />
+        </div>
       </div>
     </div>
   );

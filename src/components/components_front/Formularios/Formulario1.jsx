@@ -9,7 +9,7 @@ const Formulario1 = () => {
   const [confirmPassword, setConfirmPassword] = useState("");
 
   return (
-    <form className={styles.form}>
+    <form className={styles.form} code-type="F-1">
       {alert.msg && <Alert />}
       <input
         onChange={(e) => setName(e.target.value)}
