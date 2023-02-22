@@ -1,0 +1,226 @@
+@use "../index.scss" as *;
+.newProject {
+  &__heading {
+    background-color: $primaryColorLight;
+    color: white;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  &__flexContainer {
+    display: flex;
+    width: 100%;
+    gap: 2rem;
+  }
+}
+
+.newProject__sidebar {
+  width: 30%;
+  padding: 1rem 2rem;
+}
+
+.newProject__layout {
+  flex-grow: 1;
+}
+
+.form {
+  cursor: pointer;
+  background-color: white;
+  border-radius: $rounded_md;
+
+  input {
+    display: block;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid $primaryColorLight;
+    margin: 2rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+
+    &::placeholder {
+      color: $grayBase;
+    }
+
+    &:focus-visible {
+      outline: none;
+    }
+  }
+
+  button {
+    width: 100%;
+    background-color: $primaryColor;
+    color: white;
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: $rounded_sm;
+    cursor: pointer;
+    transition: background-color 1s;
+
+    &:hover {
+      background-color: $primaryColorStrong;
+    }
+  }
+}
+
+.text1 {
+  border: 1px solid gray;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  input[order="input-1"] {
+    display: block;
+    border: none;
+
+    font-size: 0.9rem;
+    color: blue;
+    &:focus-visible {
+      outline: none;
+      border: none;
+    }
+  }
+
+  input[order="input-2"] {
+    display: block;
+    border: none;
+
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    &:focus-visible {
+      outline: none;
+      border: none;
+    }
+  }
+
+  input[order="input-3"] {
+    display: block;
+    border: none;
+
+    font-size: 1.1;
+    &:focus-visible {
+      outline: none;
+      border: none;
+    }
+  }
+  input[order="input-4"] {
+    display: block;
+    border: none;
+
+    font-size: 1;
+    &:focus-visible {
+      outline: none;
+      border: none;
+    }
+  }
+}
+
+.text2 {
+  border: 1px solid gray;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  input[order="input-1"] {
+    display: block;
+    border: none;
+
+    font-size: 1.5rem;
+    color: red;
+    &:focus-visible {
+      outline: none;
+      border: none;
+    }
+  }
+
+  input[order="input-2"] {
+    display: block;
+    border: none;
+
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    &:focus-visible {
+      outline: none;
+      border: none;
+    }
+  }
+
+  input[order="input-3"] {
+    display: block;
+    border: none;
+
+    font-size: 1.1;
+    &:focus-visible {
+      outline: none;
+      border: none;
+    }
+  }
+  input[order="input-4"] {
+    display: block;
+    border: none;
+
+    font-size: 1;
+    &:focus-visible {
+      outline: none;
+      border: none;
+    }
+  }
+}
+
+.text3 {
+  border: 1px solid gray;
+  margin: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  input[order="input-1"] {
+    display: block;
+    border: none;
+
+    font-size: 1.2rem;
+    color: violet;
+    &:focus-visible {
+      outline: none;
+      border: none;
+    }
+  }
+
+  input[order="input-2"] {
+    display: block;
+    border: none;
+
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    &:focus-visible {
+      outline: none;
+      border: none;
+    }
+  }
+
+  input[order="input-3"] {
+    display: block;
+    border: none;
+
+    font-size: 1.1;
+    &:focus-visible {
+      outline: none;
+      border: none;
+    }
+  }
+  input[order="input-4"] {
+    display: block;
+    border: none;
+
+    font-size: 1;
+    &:focus-visible {
+      outline: none;
+      border: none;
+    }
+  }
+}

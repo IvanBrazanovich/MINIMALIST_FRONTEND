@@ -1,25 +1,24 @@
 import React, { useState } from "react";
 import styles from "../../styles/pages/layoutAuth.module.scss";
+import { useDispatch } from "react-redux";
+import { setAlertAsync } from "../../features/login/loginSlice";
+import { useSelector } from "react-redux";
+import Alert from "../../components/Alert";
 
 const Login = () => {
   // State
-  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [confirmPassword, setConfirmPassword] = useState("");
+  const dispatch = useDispatch();
+  const alert = useSelector((state) => state.login.alert);
 
   const handleSubmit = (e) => {
     e.preventDefault();
-
     // Form validation
-    if (
-      [name, password, confirmPassword, email]
-        .map((item) => item.trim())
-        .includes("") ||
-      password != confirmPassword
-    ) {
-      console.log("errado");
-      console.log(name, password, email, confirmPassword);
+    if ([password, email].map((item) => item.trim()).includes("")) {
+      return dispatch(
+        setAlertAsync({ msg: "All fields are required", error: true })
+      );
     }
   };
 
@@ -28,12 +27,8 @@ const Login = () => {
       <h1>Login</h1>
 
       <form onSubmit={handleSubmit} className={styles.form}>
-        <input
-          onChange={(e) => setName(e.target.value)}
-          type="text"
-          id="name"
-          placeholder="Name"
-        />
+        {alert.msg && <Alert />}
+
         <input
           onChange={(e) => setEmail(e.target.value)}
           type="email"
@@ -45,12 +40,6 @@ const Login = () => {
           type="password"
           id="password"
           placeholder="Password"
-        />
-        <input
-          onChange={(e) => setConfirmPassword(e.target.value)}
-          type="password"
-          id="confirm-password"
-          placeholder="Confirm Password"
         />
 
         <button type="submit">Login</button>
