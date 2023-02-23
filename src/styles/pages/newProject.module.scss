@@ -17,6 +17,15 @@
 .newProject__sidebar {
   width: 30%;
   padding: 1rem 2rem;
+
+  input {
+    pointer-events: none;
+  }
+
+  div,
+  form {
+    cursor: pointer;
+  }
 }
 
 .newProject__layout {

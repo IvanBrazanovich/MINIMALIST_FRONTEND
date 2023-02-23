@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import styles from "../../../styles/pages/newProject.module.scss";
 
-const Text1 = () => {
+const Text1 = (isDragabble = false) => {
   const [text1, setText1] = useState("text example");
   const [text2, setText2] = useState("text example");
   const [text3, setText3] = useState("text example");

@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../../../styles/pages/newProject.module.scss";
 import { useState } from "react";
 
-const Formulario1 = () => {
+const Formulario1 = (isDragabble = false) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

@@ -7,22 +7,12 @@ import { useDispatch } from "react-redux";
 import { addComponent } from "../../features/app/createPageSlice";
 
 const NewProject = () => {
-  // React redux
-  const dispatch = useDispatch();
-
-  const handleClick = (e) => {
-    const componentCode = e.target
-      .closest("[code-type]")
-      .getAttribute("code-type");
-    dispatch(addComponent(componentCode));
-  };
-
   return (
     <div className={styles.newProject}>
       <h1 className={styles.newProject__heading}>Crea tu nuevo Proyecto</h1>
 
       <div className={styles.newProject__flexContainer}>
-        <div className={styles.newProject__sidebar} onClick={handleClick}>
+        <div className={styles.newProject__sidebar}>
           <Formularios />
           <Texts />
         </div>

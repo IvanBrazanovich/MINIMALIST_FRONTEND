@@ -1,0 +1,17 @@
+.layoutPage {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+.grid__container {
+  position: relative;
+}
+
+.component {
+  overflow: hidden;
+}
+
+.gridLayout {
+  height: 100vh !important;
+}
