@@ -10,21 +10,21 @@ export const createPageSlice = createSlice({
   initialState,
   reducers: {
     addComponent: (state, action) => {
-      const { x, y, w, h } = action.payload[0];
-      console.log(action.payload[0]);
+      const { x, y, w, h } = action.payload;
+
       state.layout.push({
-        i: `${action.payload.i}/${state.layout.length}`,
+        i: `${state.draggin}/${state.layout.length}`,
         x,
         y,
-        w,
-        h,
+        w: 3,
+        h: 6,
       });
     },
     layoutShift: (state, action) => {
       state.layout = action.payload;
     },
     changeDraggin: (state, action) => {
-      console.log(action.payload);
+      state.draggin = action.payload ? action.payload : null;
     },
   },
 });

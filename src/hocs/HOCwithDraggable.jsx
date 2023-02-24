@@ -5,6 +5,7 @@ import { changeDraggin } from "../features/app/createPageSlice";
 export default function HOCwithDraggable(HocComponent) {
   const dispatch = useDispatch();
   const handleDrag = (e) => {
+    console.log(e.target.offsetWidth);
     if (!e.target) return null;
     const componentCode = e.target
       .querySelector("[code-type]")

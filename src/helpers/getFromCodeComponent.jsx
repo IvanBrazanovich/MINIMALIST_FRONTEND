@@ -19,8 +19,6 @@ const getFromCodeComponent = (code) => {
     default:
       break;
   }
-
-  return <div>hola</div>;
 };
 
 const getFormulario = (component_serie) => {
